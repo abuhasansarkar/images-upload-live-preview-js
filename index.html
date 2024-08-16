@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Upload System</title>
+    <link rel="stylesheet" href="./style.css" class="css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="topArea">
+        <form class="leftArea" method="POST">
+          <label for="imgFiles"
+            ><img src="./img/plus.jpg" alt="plus" />
+            <b>Select Images</b>
+          </label>
+          <input
+            onchange="selectAllImages()"
+            type="file"
+            hidden
+            name="img"
+            id="imgFiles"
+            multiple
+          />
+        </form>
+        <div class="rightArea">
+          <h3>Show small image</h3>
+          <div id="smallImage">
+            <img src="./img/plus.jpg" alt="img" />
+          </div>
+          <!-- <button onclick="deleteAllImages()">Delete All</button> -->
+        </div>
+      </div>
+      <div id="imageShowContainer" class="imageShowContainer"></div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
